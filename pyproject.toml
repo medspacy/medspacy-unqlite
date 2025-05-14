@@ -1,7 +1,18 @@
+[build-system]
+requires = ["setuptools", "wheel", "cython>=3.0"]
+
+
 [project]
-license = "MIT AND Charles Leifer's License)"
+name = "medspacy_unqlite"
+dynamic =  "0.9.8"
+description = "Fast Python bindings for the UnQLite embedded NoSQL database."
+readme = "README.md"
+license = "MIT AND Charles Leifer's License"
 license-files = [
     "LICENSE*"
 ]
-[build-system]
-requires = ["setuptools", "wheel", "cython>=3.0"]
+requires-python = ">=3.8"
+authors = [
+    {name = "Charles Leifer"},
+    {name = "medspacy"}
+]

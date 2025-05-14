@@ -1,5 +1,5 @@
 include README.md
-include LICENSE
+include LICENSE*
 include src/*.c
 include src/*.h
 include unqlite.c
