@@ -60,6 +60,12 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
+
+
+      - name: Print all build identifiers
+        run: |
+          pipx run cibuildwheel --print-build-identifiers
+                  
       - name: Build wheels
         uses: pypa/cibuildwheel@v2.23.3
         env:
