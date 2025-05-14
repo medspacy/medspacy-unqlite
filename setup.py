@@ -38,7 +38,6 @@ setup(
     author=['Charles Leifer','medspacy'],
     author_email='',
     url='https://github.com/medspacy/unqlite-python',
-    license='MIT',
     #install_requires=['Cython'],
     #setup_requires=['cython'],
     classifiers=[

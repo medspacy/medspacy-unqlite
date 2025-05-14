@@ -1,2 +1,7 @@
+[project]
+license = "MIT AND Charles Leifer's License)"
+license-files = [
+    "LICENSE*"
+]
 [build-system]
 requires = ["setuptools", "wheel", "cython>=3.0"]

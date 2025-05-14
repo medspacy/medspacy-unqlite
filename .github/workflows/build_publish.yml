@@ -50,7 +50,7 @@ jobs:
       - name: Print all build identifiers
         run: |
           pipx run cibuildwheel --print-build-identifiers
-                        
+
       - name: Build wheels
         uses: pypa/cibuildwheel@v2.23.3
         env:
@@ -124,6 +124,7 @@ jobs:
 
       - name: Build and publish
         run: |
+          twine check dist/*
           twine upload --skip-existing --verbose dist/*
         env:
   #          TWINE_REPOSITORY: testpypi   # uncomment this line for test
