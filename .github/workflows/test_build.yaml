@@ -63,9 +63,9 @@ jobs:
             ${{ runner.os }}-
 
 
-      - name: Print all build identifiers
-        run: |
-          pipx run cibuildwheel --print-build-identifiers
+      # - name: Print all build identifiers
+      #   run: |
+      #     pipx run cibuildwheel --print-build-identifiers
                   
       # - name: Build wheels
       #   uses: pypa/cibuildwheel@v2.23.3
@@ -84,13 +84,10 @@ jobs:
 
       - name: Build wheels
         shell: bash
-        run: |
+        run: |          
           export CIBW_BEFORE_BUILD="pip install Cython"
-          export CIBW_BUILD=${{ matrix.python }}-${{ matrix.buildplat[1] }}
-          export CIBW_ARCHS=auto
-          export CIBW_ENVIRONMENT="CFLAGS='-O3 -g0 -mtune=generic -pipe -fPIC' LDFLAGS='-fPIC'"
           export CIBW_TEST_COMMAND="python {package}/tests.py"
-          pipx run cibuildwheel --output-dir wheelhouse 
+          pipx run cibuildwheel --output-dir wheelhouse --platform ${{ matrix.buildplat[1] }} --python ${{ matrix.python }} --arch ${{ matrix.buildplat[0] }} 
 
       - name: twine check
         run: |
