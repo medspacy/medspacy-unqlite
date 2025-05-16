@@ -1,6 +1,11 @@
 name: build_publish
 on:
-  workflow_dispatch
+  workflow_dispatch:
+    inputs:
+      python_versions:
+        description: 'Python versions to build (JSON array)'
+        default: '["cp38", "cp39", "cp310", "cp311", "cp312", "cp313"]'
+        required: true
 
 
 
@@ -26,7 +31,7 @@ jobs:
           - [macos-latest, macosx_arm64]
           - [windows-latest, win_amd64]
           - [windows-2019, win32]
-        python: ["cp38", "cp39", "cp310", "cp311", "cp312", "cp313"]
+        python: ${{ fromJSON(github.event.inputs.python_versions) }}
         # python: ["cp38"]
 
     steps:
