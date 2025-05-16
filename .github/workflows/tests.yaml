@@ -92,7 +92,7 @@ jobs:
           export CIBW_TEST_COMMAND="python {package}/tests.py"
           pipx run cibuildwheel --output-dir wheelhouse 
 
-      - name: Install dependencies
+      - name: twine check
         run: |
           pip install twine
           twine check wheelhouse/*.whl
