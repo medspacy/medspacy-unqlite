@@ -93,5 +93,5 @@ jobs:
 
       - name: twine check
         run: |
-          pip install twine
+          pip install --upgrade twine
           twine check wheelhouse/*.whl
