@@ -10,7 +10,9 @@ on:
         description: 'Build platforms to use (JSON array of [runner, platform] pairs)'
         default: '[["ubuntu-latest", "manylinux_x86_64"], ["ubuntu-latest", "musllinux_x86_64"], ["macos-13", "macosx_x86_64"], ["macos-latest", "macosx_arm64"], ["windows-latest", "win_amd64"], ["windows-2019", "win32"]]'
         required: true
-
+  push:
+    tags:
+      - '*' 
 
 
 
