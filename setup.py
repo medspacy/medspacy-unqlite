@@ -37,7 +37,7 @@ setup(
     description='Fast Python bindings for the UnQLite embedded NoSQL database.',
     author=['Charles Leifer','medspacy'],
     author_email='',
-    url='https://github.com/medspacy/unqlite-python',
+    url='https://github.com/medspacy/medspacy-unqlite',
     #install_requires=['Cython'],
     #setup_requires=['cython'],
     ext_modules=cythonize([unqlite_extension])
