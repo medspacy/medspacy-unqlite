@@ -1,7 +1,9 @@
-[![Build Status](https://github.com/medspacy/medspacy-unqlite/actions/workflows/build_publish.yml/badge.svg)](https://github.com/username/repository/actions/workflows/build_publish.yml)
+[![Build Status](https://github.com/medspacy/medspacy-unqlite/actions/workflows/build_publish.yml/badge.svg)](https://github.com/medspacy/medspacy-unqlite/actions/workflows/build_publish.yml)
 [![PyPI version](https://badge.fury.io/py/medspacy-unqlite.svg)](https://badge.fury.io/py/medspacy-unqlite)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-lightblue.svg)](LICENSE)
 ![](http://media.charlesleifer.com/blog/photos/unqlite-python-logo.png)
+
+
 
 Fast Python bindings for [UnQLite](http://unqlite.org/), a lightweight, embedded NoSQL database and JSON document store.
 
