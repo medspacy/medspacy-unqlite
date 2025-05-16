@@ -31,12 +31,14 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Git clone repo and remove source code
+      shell: bash
       run: |
         pwd
         ls
         # remove cloned source code to ensure test on installed medspacy
-        python -c "import shutil;shutil.rmtree('medspacy-unqlite')"
+        python -c "import shutil;shutil.rmtree('src')"
         ls
+        rm *.pyx
 
     - name: Set up pip
       uses: actions/setup-python@v5
