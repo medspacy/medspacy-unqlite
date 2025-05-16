@@ -133,7 +133,7 @@ jobs:
           
       - name: Move wheels to dist directory
         run: |
-          list -l -a dist
+          ls -l -a dist
           mkdir -p dist_flat
           find dist -type f \( -name "*.whl" -o -name "medspacy*.tar.gz" \)
           find dist -type f \( -name "*.whl" -o -name "medspacy*.tar.gz" \) -exec cp {} dist_flat/ \;
