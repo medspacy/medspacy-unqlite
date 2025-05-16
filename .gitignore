@@ -1,3 +1,5 @@
 unqlite.c
 unqlite*.so
 MANIFEST
+build/*
+*.egg-info/*
