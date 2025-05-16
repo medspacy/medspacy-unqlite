@@ -71,4 +71,4 @@ jobs:
       run: |        
         pwd
         ls -la
-        python test.py
+        python tests.py
