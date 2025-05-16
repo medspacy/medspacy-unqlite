@@ -95,4 +95,4 @@ jobs:
       - name: Install dependencies
         run: |
           pip install twine
-          twine check wheelhouse/*
+          twine check wheelhouse/*.whl
