@@ -87,7 +87,7 @@ jobs:
         run: |          
           export CIBW_BEFORE_BUILD="pip install Cython"
           export CIBW_TEST_COMMAND="python {package}/tests.py"
-          pipx run cibuildwheel --output-dir wheelhouse --platform ${{ matrix.buildplat[1] }} --python ${{ matrix.python }} --arch ${{ matrix.buildplat[0] }} 
+          pipx run cibuildwheel --output-dir wheelhouse --platform ${{ matrix.buildplat[1] }} --python ${{ matrix.python }} --arch auto 
 
       - name: twine check
         run: |
