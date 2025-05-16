@@ -41,6 +41,5 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules"
 ]
 
-
-[tool.setuptools.package-data]
-"*" = ["LICENSE", "LICENSE_MIT"]
+[tool.setuptools]
+include-package-data = true
