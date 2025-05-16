@@ -12,7 +12,7 @@ authors = [
     {name = "Charles Leifer"},
     {name = "medspacy"}
 ]
-license-files = ["LICEN[CS]E*"]
+license = "MIT"
 requires-python = ">=3.4"
 classifiers = [
     "Development Status :: 3 - Alpha",
