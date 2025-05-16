@@ -1,4 +1,4 @@
-import glob
+
 import sys
 import warnings
 
@@ -32,13 +32,5 @@ unqlite_extension = Extension(
     sources=[python_source] + library_source)
 
 setup(
-    name='medspacy_unqlite',
-    version='0.9.8dev0',
-    description='Fast Python bindings for the UnQLite embedded NoSQL database.',
-    author=['Charles Leifer','medspacy'],
-    author_email='',
-    url='https://github.com/medspacy/medspacy-unqlite',
-    #install_requires=['Cython'],
-    #setup_requires=['cython'],
     ext_modules=cythonize([unqlite_extension])
 )

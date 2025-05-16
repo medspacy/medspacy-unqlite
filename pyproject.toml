@@ -41,5 +41,10 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules"
 ]
 
+
+[project.urls]
+"Repository" = "https://github.com/medspacy/medspacy-unqlite"
+"Release notes" = "https://github.com/medspacy/medspacy-unqlite/releases"
+
 [tool.setuptools]
 include-package-data = true
