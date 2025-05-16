@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "medspacy_unqlite"
-version = "0.9.8dev0"
+version = "0.9.8"
 description = "Fast Python bindings for the UnQLite embedded NoSQL database."
 readme = "README.md"
 authors = [
