@@ -58,7 +58,7 @@ jobs:
           if [ -d "wheelhouse" ]; then
             echo "Clearing wheelhouse directory..."
             rm -rf wheelhouse/*
-
+          fi
 
       - name: Build wheels
         uses: pypa/cibuildwheel@v2.23.3
@@ -101,6 +101,7 @@ jobs:
           if [ -d "dist" ]; then
             echo "Clearing wheelhouse directory..."
             rm -rf dist/*
+          fi
 
       - name: Build sdist
         run: |
