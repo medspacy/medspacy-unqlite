@@ -67,5 +67,8 @@ jobs:
     
     - name: Test 
       # need to run pytest after a clean pip install to 100% replicate the users' environment
+      shell: bash
       run: |        
+        pwd
+        ls -la
         python test.py
