@@ -43,4 +43,4 @@ classifiers = [
 
 
 [tool.setuptools.package-data]
-"" = ["LICENSE", "LICENSE_MIT"]
+"*" = ["LICENSE", "LICENSE_MIT"]
