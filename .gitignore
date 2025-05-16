@@ -3,3 +3,4 @@ unqlite*.so
 MANIFEST
 build/*
 *.egg-info/*
+*.whl
