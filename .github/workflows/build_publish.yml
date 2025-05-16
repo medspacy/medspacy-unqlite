@@ -124,7 +124,7 @@ jobs:
       - name: Move wheels to dist directory
         run: |
           mkdir -p dist_flat
-          find dist -type f \( -name "*.whl" -o -name "*.tar.gz" \) -exec cp {} dist_flat/ \;
+          find dist -type f \( -name "*.whl" -o -name "medspacy_unqlite-*.tar.gz" \) -exec cp {} dist_flat/ \;
           ls -l dist_flat/
           
       - name: Publish to PyPI
