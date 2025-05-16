@@ -116,16 +116,18 @@ jobs:
           path: dist
 
       - name: check downloaded
+        shell: bash
         run: |
-          mv ./dist/**/* ./dist/
-          rm -rf dist/cp*
-          rm -rf dist/sdist
-          ls -R
+          ls -l dist
+          mkdir -p clean_dist
+          find dist -type f \( -name "*.whl" -o -name "*.tar.gz" \)
+          find dist -type f \( -name "*.whl" -o -name "*.tar.gz" \) -exec mv {} clean_dist/ \;
+          ls -l clean_dist
 
       - name: Build and publish
         run: |
           twine check dist/*
-          twine upload --skip-existing --verbose dist/*
+          twine upload --skip-existing --verbose clean_dist/*
         env:
   #          TWINE_REPOSITORY: testpypi   # uncomment this line for test
   #         need to add Pypi token in secrets under the github repo's setting
