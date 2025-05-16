@@ -92,6 +92,9 @@ jobs:
           export CIBW_TEST_COMMAND="python {package}/tests.py"
           pipx run cibuildwheel
 
-      - name: twine check
-        run: |          
-          twine check wheelhouse/*.whl
+
+  # Support for project.license-files and SPDX license expressions in project.license (PEP 639) were introduced in version 77.0.0. By 05/16/2025, it seems still an issue with twine.  
+  # Thus, comment this out for now.
+      # - name: twine check
+      #   run: |          
+      #     twine check wheelhouse/*.whl
