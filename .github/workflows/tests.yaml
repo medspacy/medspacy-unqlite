@@ -81,3 +81,8 @@ jobs:
           CIBW_ARCHS: auto
           CIBW_ENVIRONMENT: "CFLAGS='-O3 -g0 -mtune=generic -pipe -fPIC' LDFLAGS='-fPIC'"
           CIBW_TEST_COMMAND: "python {package}/tests.py"
+
+      - name: Install dependencies
+        run: |
+          pip install twine
+          twine check wheelhouse/*
