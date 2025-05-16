@@ -85,9 +85,8 @@ jobs:
       - name: Build wheels
         shell: bash
         run: |          
-          export CIBW_BEFORE_BUILD="pip install Cython"
-          export CIBW_TEST_COMMAND="python {package}/tests.py"
-          pipx run cibuildwheel --output-dir wheelhouse --platform ${{ matrix.buildplat[1] }} --python ${{ matrix.python }} --arch auto 
+          CIBW_BUILD: ${{ matrix.python }}-${{ matrix.buildplat[1] }}
+          pipx run cibuildwheel --output-dir wheelhouse --archs auto --test-command "python {package}/tests.py" --environment "CFLAGS='-O3 -g0 -mtune=generic -pipe -fPIC' LDFLAGS='-fPIC'" --before-build "pip install Cython"
 
       - name: twine check
         run: |
